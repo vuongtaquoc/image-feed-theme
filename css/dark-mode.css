@@ -1,0 +1,19 @@
+.dark-mode {
+	background-color: #000;
+}
+.dark-mode .nav-wrapper {
+	background-color: #000 !important;
+}
+.dark-mode .navbar,
+.widget {
+	border-bottom: 1px solid #424242 !important;
+}
+.dark-mode .content-left {
+	border-right: 1px solid #424242 !important;
+}
+.dark-mode .arrow-right {
+	background: url('../img/right-arrow-dark.png') no-repeat center;
+}
+.dark-mode .arrow-left {
+	background: url('../img/left-arrow-dark.png') no-repeat center;
+}

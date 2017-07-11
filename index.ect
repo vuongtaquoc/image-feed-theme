@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Image Feed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="<%= @asset('/libs/materialize-css/dist/css/materialize.min.css') %>">
+	<link rel="stylesheet" href="<%= @asset('/css/style.css') %>">
+	<link rel="stylesheet" href="<%= @asset('/css/dark-mode.css') %>">
+	<% if @settings['ci_header']: %>
+		<%- @settings['ci_header'] %>
+	<% end %>
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-wrapper white">
+			<a href="/" class="brand-logo" title="<%= @settings['page_title'] || 'Image Feed' %>">
+				<img src="<%= @asset('/img/logo.png') %>" alt="<%= @settings['page_title'] || 'Image Feed' %>">
+			</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li>
+					<div class="switch">
+						<label>
+						Dark mode
+						<input type="checkbox" id="switch-mode">
+						<span class="lever red lighten-4"></span>
+						</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="wrapper">
+		<div class="row wrapper-row">
+			<section class="col xl9 m8 s12 content-left">
+				<div class="image-container">
+					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="Image Feed">
+				</div><!-- image-container -->
+
+				<div class="btn-group">
+					<a class="btn-nav-left" href="<%= @prev %>" title="Previous">
+						<div class="arrow-left"></div>
+					</a>
+
+					<a class="btn-nav-right" href="<%= @next %>" title="Next">
+						<div class="arrow-right"></div>
+					</a>
+				</div>
+			</section><!-- content-left -->
+
+			<aside class="col xl3 m4 s12 content-right">
+				<div class="widget widget-ads">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- Ads 5 - Sidebar -->
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:290px;height:300px"
+						 data-ad-client="ca-pub-4956446712397066"
+						 data-ad-slot="1783276235"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<div class="widget widget-action">
+					<a class="waves-effect waves-light btn red lighten-1" href="/">Random</a>
+				</div>
+				<div class="widget">
+					<div class="fb-like" data-href="<%= @siteUrl %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+				</div>
+				<div class="widget">
+					<div class="fb-comments" data-href="<%= @siteUrl %>" data-numposts="5" data-width="100%"></div>
+				</div>
+			</aside><!-- .content-right -->
+		</div>
+	</section>
+	<script src="<%= @asset('/libs/jquery/dist/jquery.min.js') %>"></script>
+	<script src="<%= @asset('/libs/materialize-css/dist/js/materialize.min.js') %>"></script>
+	<script src="<%= @asset('/js/app.js') %>"></script>
+	<% if @settings['ci_footer']: %>
+		<%- @settings['ci_footer'] %>
+	<% end %>
+</body>
+</html>
