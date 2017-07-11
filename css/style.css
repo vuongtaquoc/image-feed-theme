@@ -35,6 +35,8 @@ html, body {
 .image-container img {
 	max-height: 100%;
 	max-width: 100%;
+	vertical-align: middle;
+	display: inline-block;
 }
 .btn-group {
 	position: absolute;

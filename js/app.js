@@ -6,6 +6,9 @@ $(function() {
 		var contentHeight = window.innerHeight - headerHeight;
 
 		$('.content-left').height(contentHeight);
+		$('.content-left').css({
+			'line-height': contentHeight + 'px'
+		});
 		$('.content-right').height(contentHeight);
 	}
 
