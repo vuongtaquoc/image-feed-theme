@@ -26,7 +26,7 @@ html, body {
 }
 .content-left {
 	position: relative;
-	border-right: 1px solid #e0e0e0;
+	/*border-right: 1px solid #e0e0e0;*/
 	height: 500px;
 }
 .content-right {
@@ -57,6 +57,14 @@ html, body {
 
 .btn-nav-right {
 	right: 15px;
+}
+.btn-nav-center {
+	left: 25%;
+	right: 25%;
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
 }
 .btn-nav-left:hover .arrow-left,
 .btn-nav-right:hover .arrow-right {
