@@ -111,15 +111,19 @@ body,
 }
 .arrow-right {
 	right: 10px;
-	background: url('../img/right-arrow-dark.png') no-repeat center;
+	background: url('../img/right-arrow.png') no-repeat center;
 }
 .arrow-left {
 	left: 10px;
-	background: url('../img/left-arrow-dark.png') no-repeat center;
+	background: url('../img/left-arrow.png') no-repeat center;
 }
 
 .widget {
 	padding: 10px 0;
 	border-bottom: 1px solid #e0e0e0;
 	overflow: hidden;
+}
+
+.fb-page, .fb-page iframe[style], .fb-page span {
+	width: 100% !important;
 }
