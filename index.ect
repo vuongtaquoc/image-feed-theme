@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Top Girls VIP</title>
+	<title>TopGirls VIP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="<%= @asset('/libs/materialize-css/dist/css/materialize.min.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/style.css') %>">
@@ -9,6 +9,8 @@
 	<% if @settings['ci_header']: %>
 		<%- @settings['ci_header'] %>
 	<% end %>
+	<!-- FB meta -->
+	<meta property="og:image" content="<%= @media.storage == 'local' && @upload(@media) || @media.path %>">
 </head>
 <body>
 	<nav class="navbar">
@@ -34,7 +36,7 @@
 		<div class="row wrapper-row">
 			<section class="col xl9 m8 s12 content-left">
 				<div class="image-container">
-					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="Image Feed">
+					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="TopGirls VIP">
 				</div><!-- image-container -->
 
 				<div class="btn-group">
