@@ -6,8 +6,9 @@ html, body {
 	border-bottom: 1px solid #e0e0e0;
 }
 .brand-logo {
-	margin-left: 15px;
-	padding-top: 5px !important;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-top: 3px !important;
 	line-height: 0;
 }
 .switch label input[type=checkbox]:checked+.lever:after {
@@ -20,7 +21,11 @@ html, body {
 .wrapper-row {
 	margin-bottom: 0 !important;
 }
-.image-container {
+.image-container,
+.btn-group {
+	position: absolute;
+	top: 0;
+	left: 0;
 	height: 100%;
 	width: 100%;
 	text-align: center
@@ -30,9 +35,9 @@ html, body {
 	/*border-right: 1px solid #e0e0e0;*/
 	height: 500px;
 }
-.content-right {
+/*.content-right {
 	overflow-y: auto;
-}
+}*/
 .image-container img {
 	max-height: 100%;
 	max-width: 100%;
@@ -40,15 +45,11 @@ html, body {
 	display: inline-block;
 }
 .btn-group {
-	position: absolute;
-	top: 0;
 	z-index: 2;
-	bottom: 0;
-	width: 100%;
 }
 .btn-nav-left,
 .btn-nav-right {
-	width: 25%;
+	width: 60px;
 	top: 0;
 	position: absolute;
 	display: block;
@@ -59,20 +60,20 @@ html, body {
 }
 
 .btn-nav-right {
-	right: 15px;
+	right: 0;
 }
 .btn-nav-center {
-	left: 25%;
-	right: 25%;
+	left: 60px;
+	right: 60px;
 	position: absolute;
 	display: block;
 	top: 0;
 	bottom: 0;
 }
-.btn-nav-left:hover .arrow-left,
-.btn-nav-right:hover .arrow-right {
+.btn-nav-left:hover,
+.btn-nav-right:hover {
 	opacity: 1;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .arrow-left,
@@ -99,11 +100,11 @@ html, body {
 }
 .arrow-right {
 	right: 10px;
-	background: url('../img/right-arrow.png') no-repeat center;
+	background: url('../img/right-arrow-dark.png') no-repeat center;
 }
 .arrow-left {
 	left: 10px;
-	background: url('../img/left-arrow.png') no-repeat center;
+	background: url('../img/left-arrow-dark.png') no-repeat center;
 }
 
 .widget {

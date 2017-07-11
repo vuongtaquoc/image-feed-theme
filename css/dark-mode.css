@@ -19,3 +19,9 @@
 .dark-mode .arrow-left {
 	background: url('../img/left-arrow-dark.png') no-repeat center;
 }
+
+.dark-mode .btn-nav-left:hover,
+.dark-mode .btn-nav-right:hover {
+	opacity: 1;
+	background-color: rgba(0, 0, 0, 0.3);
+}
