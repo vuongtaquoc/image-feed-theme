@@ -6,10 +6,12 @@
 }
 .dark-mode .navbar,
 .widget {
-	border-bottom: 1px solid #424242 !important;
+	/*border-bottom: 1px solid #424242 !important;*/
+	border-bottom: none!important;
 }
 .dark-mode .content-left {
-	border-right: 1px solid #424242 !important;
+	/*border-right: 1px solid #424242 !important;*/
+	border-bottom: none!important;
 }
 .dark-mode .arrow-right {
 	background: url('../img/right-arrow-dark.png') no-repeat center;

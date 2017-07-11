@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Image Feed</title>
+	<title>TopGirls VIP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="<%= @asset('/libs/materialize-css/dist/css/materialize.min.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/style.css') %>">
@@ -9,6 +9,8 @@
 	<% if @settings['ci_header']: %>
 		<%- @settings['ci_header'] %>
 	<% end %>
+	<!-- FB meta -->
+	<% include 'fb-meta' %>
 </head>
 <body>
 	<nav class="navbar">
@@ -33,8 +35,8 @@
 	<section class="wrapper">
 		<div class="row wrapper-row">
 			<section class="col xl9 m8 s12 content-left">
-				<div class="image-container">
-					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="Image Feed">
+				<div class="image-container text-center">
+					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="TopGirls VIP">
 				</div><!-- image-container -->
 
 				<div class="btn-group">
@@ -44,6 +46,8 @@
 
 					<a class="btn-nav-right" href="<%= @next %>" title="Next">
 						<div class="arrow-right"></div>
+					</a>
+					<a class="btn-nav-center" href="/">
 					</a>
 				</div>
 			</section><!-- content-left -->
@@ -61,7 +65,9 @@
 					</script>
 				</div>
 				<div class="widget widget-action">
+					<a class="waves-effect waves-light btn red lighten-1" href="<%= @prev %>">&lt;</a>
 					<a class="waves-effect waves-light btn red lighten-1" href="/">Random</a>
+					<a class="waves-effect waves-light btn red lighten-1" href="<%= @next %>">&gt;</a>
 				</div>
 				<div class="widget">
 					<div class="fb-like" data-href="<%= @siteUrl %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
