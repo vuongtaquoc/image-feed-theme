@@ -34,6 +34,9 @@ html, body {
 	position: relative;
 	/*border-right: 1px solid #e0e0e0;*/
 	height: 500px;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
 }
 /*.content-right {
 	overflow-y: auto;
