@@ -3,12 +3,16 @@
 <head>
 	<title>TopGirls VIP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 	<link rel="stylesheet" href="<%= @asset('/libs/materialize-css/dist/css/materialize.min.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/style.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/dark-mode.css') %>">
 	<% if @settings['ci_header']: %>
 		<%- @settings['ci_header'] %>
 	<% end %>
+
+	<!-- Favicon -->
+	<% include 'favicon' %>
 	<!-- FB meta -->
 	<% include 'fb-meta' %>
 </head>
