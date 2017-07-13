@@ -3,26 +3,30 @@
 <head>
 	<title>TopGirls VIP</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 	<link rel="stylesheet" href="<%= @asset('/libs/materialize-css/dist/css/materialize.min.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/style.css') %>">
 	<link rel="stylesheet" href="<%= @asset('/css/dark-mode.css') %>">
 	<% if @settings['ci_header']: %>
 		<%- @settings['ci_header'] %>
 	<% end %>
+
+	<!-- Favicon -->
+	<% include 'favicon' %>
 	<!-- FB meta -->
 	<% include 'fb-meta' %>
 </head>
 <body>
 	<nav class="navbar">
 		<div class="nav-wrapper white">
-			<a href="/" class="brand-logo" title="<%= @settings['page_title'] || 'Image Feed' %>">
+			<a href="/" class="brand-logo" title="<%= @settings['page_title'] || 'Media Feed' %>">
 				<img src="<%= @asset('/img/logo.png') %>" alt="<%= @settings['page_title'] || 'Image Feed' %>">
 			</a>
 			<ul id="nav-mobile" class="right">
 				<li>
 					<div class="switch">
 						<label>
-						Dark mode
+							Dark
 						<input type="checkbox" id="switch-mode">
 						<span class="lever red lighten-4"></span>
 						</label>
@@ -36,23 +40,23 @@
 		<div class="row hide-on-med-and-up">
 			<div class="col s12 center-align">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Ads 5 - Sidebar -->
+				<!-- TopGirls VIP - mobile small banner -->
 				<ins class="adsbygoogle"
-					 style="display:inline-block;width:290px;height:300px"
-					 data-ad-client="ca-pub-4956446712397066"
-					 data-ad-slot="1783276235"></ins>
+					style="display:inline-block;width:320px;height:50px"
+					data-ad-client="ca-pub-4956446712397066"
+					data-ad-slot="8860716634"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
 				</script>
 			</div>
 		</div>
-		<div class="row hide-on-med-and-up"">
+		<!-- <div class="row hide-on-med-and-up">
 			<div class="col s12 center-align">
 				<a class="waves-effect waves-light btn red lighten-1" href="<%= @prev %>">&lt;</a>
 				<a class="waves-effect waves-light btn red lighten-1" href="/">Random</a>
 				<a class="waves-effect waves-light btn red lighten-1" href="<%= @next %>">&gt;</a>
 			</div>
-		</div>
+		</div> -->
 		<div class="row wrapper-row">
 			<section class="col xl9 m8 s12 content-left">
 				<div class="image-container text-center">
@@ -73,6 +77,8 @@
 			</section><!-- content-left -->
 
 			<aside class="col xl3 m4 s12 content-right">
+				<div class="fb-page" data-href="https://www.facebook.com/topgirls.vip" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="500"><blockquote cite="https://www.facebook.com/topgirls.vip" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/topgirls.vip">Top Girls</a></blockquote></div>
+				<br>
 				<div class="widget widget-ads center-align">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- Ads 5 - Sidebar -->
@@ -84,11 +90,11 @@
 					(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
 				</div>
-				<div class="widget widget-action center-align">
+				<!-- <div class="widget widget-action center-align">
 					<a class="waves-effect waves-light btn red lighten-1" href="<%= @prev %>">&lt;</a>
 					<a class="waves-effect waves-light btn red lighten-1" href="/">Random</a>
 					<a class="waves-effect waves-light btn red lighten-1" href="<%= @next %>">&gt;</a>
-				</div>
+				</div> -->
 				<div class="widget">
 					<div class="fb-like" data-href="<%= @siteUrl %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 				</div>

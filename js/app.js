@@ -3,13 +3,21 @@ $(function() {
 
 	function calcContentHeight() {
 		var headerHeight = $('.navbar').outerHeight(true);
-		var contentHeight = window.innerHeight - headerHeight;
+		var extraHeight = 0;
+
+		$('.wrapper > .hide-on-med-and-up').each(function() {
+			extraHeight += $(this).outerHeight(true);
+		});
+
+		var contentHeight = window.innerHeight - headerHeight - extraHeight - 10;
 
 		$('.content-left').height(contentHeight);
 		$('.content-left').css({
 			'line-height': contentHeight + 'px'
 		});
-		$('.content-right').height(contentHeight);
+		$('.content-right').css({
+			'min-height': contentHeight + 'px'
+		});
 	}
 
 	function setMode(isDarkMode) {
@@ -25,7 +33,7 @@ $(function() {
 	}
 
 	function setDefaultMode() {
-		var isDarkMode = localStorage.getItem('mode') === 'dark';
+		var isDarkMode = localStorage.getItem('mode') !== 'light';
 
 		setMode(isDarkMode);
 
