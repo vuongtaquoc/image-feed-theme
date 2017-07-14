@@ -17,7 +17,7 @@
 	<% include 'fb-meta' %>
 </head>
 <body>
-	<nav class="navbar">
+	<nav class="navbar hide-on-med-and-down">
 		<div class="nav-wrapper white">
 			<a href="/" class="brand-logo" title="<%= @settings['page_title'] || 'Media Feed' %>">
 				<img src="<%= @asset('/img/logo.png') %>" alt="<%= @settings['page_title'] || 'Image Feed' %>">
@@ -63,16 +63,11 @@
 					<img src="<%= @media.storage == 'local' && @upload(@media) || @media.path %>" class="responsive-img center-block" alt="TopGirls VIP">
 				</div><!-- image-container -->
 
-				<div class="btn-group">
-					<a class="btn-nav-left" href="<%= @prev %>" title="Previous">
-						<div class="arrow-left"></div>
-					</a>
-
-					<a class="btn-nav-right" href="<%= @next %>" title="Next">
-						<div class="arrow-right"></div>
-					</a>
-					<a class="btn-nav-center" href="/">
-					</a>
+				<div class="btn-group hide-on-med-and-up" id="swipe-element">
+					<% include 'navigation' %>
+				</div>
+				<div class="btn-group hide-on-med-and-down">
+					<% include 'navigation' %>
 				</div>
 			</section><!-- content-left -->
 
@@ -106,7 +101,14 @@
 	</section>
 	<script src="<%= @asset('/libs/jquery/dist/jquery.min.js') %>"></script>
 	<script src="<%= @asset('/libs/materialize-css/dist/js/materialize.min.js') %>"></script>
+	<script src="<%= @asset('/js/hammer.min.js') %>"></script>
 	<script src="<%= @asset('/js/app.js') %>"></script>
+	<script>
+	<!--
+		var prevUrl = '<%= @prev %>';
+		var nextUrl = '<%= @next %>';
+	-->
+	</script>
 	<% if @settings['ci_footer']: %>
 		<%- @settings['ci_footer'] %>
 	<% end %>

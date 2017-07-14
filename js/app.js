@@ -56,4 +56,20 @@ $(function() {
 
 		setMode(isDarkMode);
 	});
+
+	var swipeElement = document.getElementById('swipe-element');
+	var mc = new Hammer(swipeElement);
+
+	mc.get('pinch').set({ enable : true });
+	mc.get('swipe').set({ direction : Hammer.DIRECTION_ALL });
+
+	mc.on('panleft panright pandown', function(ev) {
+		if (ev.type === 'panleft') {
+			window.location = nextUrl;
+		} else if (ev.type === 'panright') {
+			window.location = prevUrl;
+		} else if (ev.type === 'pandown') {
+			window.location = '/';
+		}
+	});
 });
